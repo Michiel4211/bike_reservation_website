@@ -1,0 +1,42 @@
+﻿@model Bike_store.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.P_CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_CustomerGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_CustomerGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_CustomerMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_CustomerMail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

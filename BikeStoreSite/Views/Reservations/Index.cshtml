@@ -1,0 +1,52 @@
+﻿@using BikeStoreSite.ViewModel;
+@using Bike_store;
+@model ReservationViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p style="font-size:20px">
+    @Html.ActionLink("Huur fiets", "../reservations/create", new { id = Model.Store.StoreId })
+</p>
+
+<br />
+<h2>Alle reserveringen bij deze winkel:</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.reservation.P_StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reservation.P_EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reservation.P_PaymentStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reservation.P_Price)
+        </th>
+    </tr>
+
+    @foreach (Reservation item in Model.AllReservations)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.P_StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.P_EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.P_PaymentStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.P_Price)
+            </td>
+        </tr>
+    }
+
+</table>

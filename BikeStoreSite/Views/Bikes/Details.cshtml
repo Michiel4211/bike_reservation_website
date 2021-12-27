@@ -1,0 +1,82 @@
+﻿@model Bike_store.Bike
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bike</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_BikeBrand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_BikeBrand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_BikeType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_BikeType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_BikeGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_BikeGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_BikeSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_BikeSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_HourRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_HourRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_DayRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_DayRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_Discription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_Discription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BikeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

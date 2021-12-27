@@ -1,0 +1,42 @@
+﻿@model Bike_store.Store
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Store</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.P_StreetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_StreetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_MaxCapacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_MaxCapacity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StoreId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

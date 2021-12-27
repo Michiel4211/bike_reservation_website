@@ -1,0 +1,41 @@
+﻿@model Bike_store.Reservation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.P_StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.P_PaymentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.P_PaymentStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReservationId }) |
+</p>
